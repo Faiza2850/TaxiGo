@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Email Template</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #333333;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 950px;
+      margin: 0 auto;
+      padding: 30px;
+      padding-left: 6%;
+      background-color: #000000;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .header {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #000;
+      color: #ffffff;
+    }
+
+    .header img {
+      height: 50px;
+    }
+
+    .header h1 {
+      font-size: 24px;
+      font-weight: bold;
+      color: #ffffff;
+      margin-top: 10px;
+    }
+
+    .welcome {
+      text-align: center;
+      margin-top: 30px;
+      background: #000;
+      color: #ffffff;
+      font-family: Barlow;
+    }
+
+    .welcome span {
+      font-weight: bold;
+    }
+
+    .content {
+      margin-top: 30px;
+      background-color: #ffff;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .content p {
+      color: #666666;
+      text-align: center;
+      font-size: x-large;
+      font-family: Barlow;
+
+    }
+
+    .content a {
+      color: #007bff;
+      text-decoration: underline;
+    }
+
+    .faq-section {
+      margin: 20px 0;
+    }
+
+    .faq-question {
+      font-size: 18px;
+      font-weight: bold;
+      color: #fe9901;
+    }
+
+    .faq-answer {
+      margin: 10px 0;
+      color: #667085;
+      max-width: 70%;
+
+      font-size: 16px;
+    }
+
+    .divider {
+      border-top: 1px solid #EAECF0;
+      margin: 20px 0;
+
+    }
+
+    .back-btn {
+      display: block;
+      text-align: center;
+      background-color: #000;
+      color: #ffcc00;
+      padding: 15px;
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 5px;
+      margin: 20px 0;
+    }
+
+    .icon {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-left: 10px;
+      vertical-align: middle;
+    }
+
+    .table-container {
+      overflow: hidden;
+      border: 1px #333333;
+      border-radius: 10px;
+      padding-right: 5%;
+      padding-left: 5%;
+
+    }
+
+    table {
+      width: 95%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border: 1px solid #333333;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    th,
+    td {
+      padding: 10px;
+      border: 1px solid #333333;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+      text-align: center;
+    }
+
+    .link {
+      color: #fe9901;
+    }
+
+    .boldfont {
+      font-size: larger;
+    }
+
+    .welcome h2 {
+      font-weight: normal;
+    }
+  </style>
+</head>
+
+<body class="bg-black">
+  <div class="bg-black w-full ">
+    <div class="header">
+      <img src="https://heuristic-wright.217-174-244-122.plesk.page/logo.svg" alt="TaxiGo Logooo" />
+    </div>
+
+    <div class="welcome">
+
+      <h2>Hi <span class="bold-text">Admin</span>,</h2>
+      <h2>
+        You have a query on your page. Please check the details below
+      </h2>
+    </div>
+
+
+    <!-- Table Section -->
+    <div class="faq-section">
+
+      <div class="table-container justify-center">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Message / Query</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{.Name}}</td>
+              <td>{{.UserEmail}}</td>
+              <td>
+                {{.FeedbackMessage}}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>

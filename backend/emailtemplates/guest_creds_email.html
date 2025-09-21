@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #000;
+        color: #333333;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 950px;
+        margin: 0 auto;
+        padding: 30px;
+        padding-left: 6%;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+      .header {
+        text-align: center;
+        padding: 20px 0;
+        background-color: #000;
+        color: #ffffff;
+      }
+      .header img {
+        height: 50px;
+      }
+      .header h1 {
+        font-size: 24px;
+        font-weight: bold;
+        color: #ffffff;
+        margin-top: 10px;
+      }
+      .welcome {
+        text-align: center;
+        margin-top: 30px;
+        background: #000;
+        color: #ffffff;
+        font-family: Barlow;
+      }
+      .welcome h2 {
+        font-weight: normal;
+      }
+      .welcome span {
+        font-weight: bold;
+      }
+      .content {
+        margin-top: 30px;
+        background-color: #ffff;
+        padding: 20px;
+        border-radius: 10px;
+      }
+      .content p {
+        color: #666666;
+        text-align: center;
+        font-size: x-large;
+        font-family: Barlow;
+      }
+      .content a {
+        color: #007bff;
+        text-decoration: underline;
+      }
+      .faq-section {
+        margin: 20px 0;
+      }
+      .faq-question {
+        font-size: 18px;
+        font-weight: bold;
+        color: #fe9901;
+      }
+      .faq-answer {
+        margin: 10px 0;
+        color: #667085;
+        max-width: 70%;
+        font-size: 16px;
+      }
+      .divider {
+        border-top: 1px solid #EAECF0;
+        margin: 20px 0;
+      }
+      .back-btn {
+        display: block;
+        text-align: center;
+        background-color: #000;
+        color: #ffcc00;
+        padding: 15px;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 5px;
+        margin: 20px 0;
+      }
+      .table-container {
+        overflow: hidden;
+        border: 1px  #333333;
+        border-radius: 10px;
+        padding-right: 5%;
+      }
+      table {
+        width: 95%;
+        border-collapse: separate;
+        border-spacing: 0;
+        border: 1px solid #333333;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      th, td {
+        padding: 10px;
+        border: 1px solid #333333;
+        text-align: left;
+      }
+      th {
+        background-color: #f2f2f2;
+        text-align: center;
+      }
+      .link {
+        color: #fe9901;
+      }
+      .boldfont {
+        font-size: larger;
+      }
+    </style>
+  </head>
+  <body class="bg-black">
+    <div class="bg-black w-full">
+      <div class="header">
+        <img src="http://localhost:3000/logo.svg" alt="TaxiGo Logo" />
+      </div>
+      <div class="welcome">
+        <h2>Hi <span class="bold-text">{{.Name}}</span>,</h2>
+        <h2>{{.Subject}}</h2>
+      </div>
+
+      <div class="container">
+        <div class="content">
+          <p>
+            Your customer account has been created! You can log in to manage your bookings and access other services on <a href="http://localhost:3000/">TaxiGo.com</a>.
+          </p>
+
+          <p>
+            Here are your login details:
+          </p>
+
+          <p>
+            <strong>Email:</strong> {{.Email}}<br />
+            <strong>Password:</strong> {{.Password}}
+          </p>
+
+          <p>
+            Please change your password upon your first login.
+          </p>
+
+          <div class="divider"></div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="divider"></div>
+
+        <div class="faq-section">
+          <div class="faq-question">What size car do I need?</div>
+          <div class="faq-answer">
+            If you are unsure what vehicle size to book, we recommend using our Vehicle Calculator tool,
+            <a class="link" href="https://taxigo.com/vehicle-calculator">Vehicle & Luggage Calculator</a>.
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Table Section -->
+        <div class="faq-section">
+          <div class="faq-question">What emails can I expect to receive?</div>
+          <div class="faq-answer">As a customer, you can expect to receive:</div>
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Email Type</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Welcome Email</td>
+                  <td>A welcome email is sent to all new customers, containing FAQs and login details.</td>
+                </tr>
+                <tr>
+                  <td>Confirmation</td>
+                  <td>Your confirmation email is sent per journey.</td>
+                </tr>
+                <tr>
+                  <td>Receipt</td>
+                  <td>Sent shortly after payment is made.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- FAQ Questions and Answers -->
+        <div class="faq-section">
+          <div class="faq-question">How do I find my driver from an airport, port, or station?</div>
+          <div class="faq-answer">The pickup instructions will be contained in the "Journey Details" email.</div>
+        </div>
+        <!-- Additional FAQ sections can go here -->
+
+      </div>
+    </div>
+  </body>
+</html>
